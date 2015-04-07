@@ -24,6 +24,7 @@ import eu.aleon.aleoncean.device.local.LocalDeviceEEPF60202;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA50205;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA50401;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA50402;
+import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA50703;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA50802;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA51201;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA52001;
@@ -54,7 +55,9 @@ public enum SupportedDevice {
     RD_F60201("RD_F6-02-01", RemoteDeviceEEPF60201.class),
     RD_F60202("RD_F6-02-02", RemoteDeviceEEPF60202.class),
     RD_F61000("RD_F6-10-00", RemoteDeviceEEPF61000.class),
-    RD_F61001("RD_F6-10-01", RemoteDeviceEEPF61001.class);
+    RD_F61001("RD_F6-10-01", RemoteDeviceEEPF61001.class),
+    //Manuel Klimek added:
+    RD_A50703("RD_A5-07-03", RemoteDeviceEEPA50703.class);
 
     private final String ident;
     private final Class<? extends StandardDevice> clazz;
