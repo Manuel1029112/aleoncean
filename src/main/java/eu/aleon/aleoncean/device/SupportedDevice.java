@@ -74,6 +74,7 @@ public enum SupportedDevice {
     }
 
     public static Class<? extends StandardDevice> getClassForIdent(final String ident) {
+    	System.out.println("HAALLOOO: " + ident);
         return IDENT_TO_CLASS_MAPPING.get(ident);
     }
 
