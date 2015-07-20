@@ -31,6 +31,7 @@ import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPA52001;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPD20108;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPF60201;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPF60202;
+import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPF60203;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPF61000;
 import eu.aleon.aleoncean.device.remote.RemoteDeviceEEPF61001;
 
@@ -57,7 +58,8 @@ public enum SupportedDevice {
     RD_F61000("RD_F6-10-00", RemoteDeviceEEPF61000.class),
     RD_F61001("RD_F6-10-01", RemoteDeviceEEPF61001.class),
     //Manuel Klimek added:
-    RD_A50703("RD_A5-07-03", RemoteDeviceEEPA50703.class);
+    RD_A50703("RD_A5-07-03", RemoteDeviceEEPA50703.class),
+    RD_F60203("RD_F6-02-03", RemoteDeviceEEPF60203.class);
 
     private final String ident;
     private final Class<? extends StandardDevice> clazz;
@@ -77,7 +79,6 @@ public enum SupportedDevice {
     }
 
     public static Class<? extends StandardDevice> getClassForIdent(final String ident) {
-    	System.out.println("HAALLOOO: " + ident);
         return IDENT_TO_CLASS_MAPPING.get(ident);
     }
 

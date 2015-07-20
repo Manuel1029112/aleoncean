@@ -13,3 +13,6 @@ hs_err_pid*
 
 # Build products
 /target/
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs

@@ -13,7 +13,7 @@ import eu.aleon.aleoncean.device.StandardDevice;
 import eu.aleon.aleoncean.packet.EnOceanId;
 import eu.aleon.aleoncean.packet.RadioPacket;
 import eu.aleon.aleoncean.packet.radio.RadioPacket4BS;
-import eu.aleon.aleoncean.packet.radio.userdata.UserDataEEPA50703;
+import eu.aleon.aleoncean.packet.radio.userdata.UserDataEEPA50701;
 import eu.aleon.aleoncean.packet.radio.userdata.UserDataScaleValueException;
 import eu.aleon.aleoncean.rxtx.ESP3Connector;
 
@@ -72,7 +72,8 @@ public class RemoteDeviceEEPA50703 extends StandardDevice implements RemoteDevic
 	            return;
 	        }
 	        
-	        final UserDataEEPA50703 userData = new UserDataEEPA50703(packet.getUserDataRaw());
+	        final UserDataEEPA50701 userData = new UserDataEEPA50701(packet.getUserDataRaw());
+	        
 	        try {
 	        	setSupplyVoltage(DeviceParameterUpdatedInitiation.RADIO_PACKET, userData.getSupplyVoltage());
 	        } catch (final UserDataScaleValueException ex) {
